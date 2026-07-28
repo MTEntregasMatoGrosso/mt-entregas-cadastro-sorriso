@@ -322,7 +322,7 @@
 
     <div class="question">
       <label>Horário do treinamento <span class="req">*</span></label>
-      <div class="help-text">O treinamento tem duração aproximada de 2 horas.</div>
+      <div class="help-text">O treinamento tem duração aproximada de 1 hora.</div>
       <div class="time-options">
         <label><input type="radio" name="q16_horario" value="noite_18h" checked><span>Noite — 18:00h</span></label>
       </div>
@@ -461,7 +461,7 @@ function setMinDate() {
   if (now.getHours() >= 17) {
     minDate.setDate(minDate.getDate() + 1);
   }
-  while (minDate.getDay() === 0) {
+  while (minDate.getDay() === 0 || minDate.getDay() === 6) {
     minDate.setDate(minDate.getDate() + 1);
   }
   const yyyy = minDate.getFullYear();
