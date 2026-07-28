@@ -468,6 +468,9 @@ function setMinDate() {
   const mm = String(minDate.getMonth() + 1).padStart(2, '0');
   const dd = String(minDate.getDate()).padStart(2, '0');
   document.getElementById('q15_data').min = yyyy + '-' + mm + '-' + dd;
+  if (now.getHours() >= 17) {
+    document.getElementById('s5-desc').innerHTML = 'Escolha o melhor dia e horário para o treinamento presencial.<br><span style="color:#e65100;font-size:13px;">⚠️ Cadastros feitos após as 17h só podem agendar a partir de amanhã.</span>';
+  }
 }
 
 function showSection(idx) {
